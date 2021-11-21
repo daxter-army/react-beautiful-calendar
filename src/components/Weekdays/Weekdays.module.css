@@ -1,0 +1,9 @@
+.calendar__weekdays {
+    padding: 7px 2px 0px 5px;
+    color: #c0c0c0;
+    font-size: small;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* border: 1px blue solid; */
+}

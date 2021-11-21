@@ -1,0 +1,7 @@
+.calendar__dateview {
+    padding: 2px 2px 2px 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* border: 1px red solid; */
+}

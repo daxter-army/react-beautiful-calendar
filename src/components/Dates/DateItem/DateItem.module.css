@@ -1,0 +1,41 @@
+.calendar__dateItem {
+    /* padding: 10px 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px black solid; */
+}
+
+/* ORDER MATTERS HERE */
+.calendar__datenumber {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 37px;
+    transition : 0.1s;
+    border-radius: 50%;
+}
+
+.calendar__anotherMonth__dateNumber {
+    cursor: default;
+    color: #b5b5b5;
+}
+
+.calendar__datenumber:hover {
+    color: #34B505;
+    background-color: #DAFFCC;
+}
+
+.calendar__anotherMonth__dateNumber:hover {
+    color: #b5b5b5;
+    background-color: #F3F3F3;
+}
+/* ORDER MATTERS HERE */
+
+.datebox__currDate {
+    color: #34B505;
+    font-weight: bold;
+    background-color: #DAFFCC;
+}

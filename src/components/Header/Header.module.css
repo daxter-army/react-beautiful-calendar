@@ -1,0 +1,23 @@
+.calendar__header {
+  /* padding: 5px 0px; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.calender__header__item {
+  padding: 4px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px red solid; */
+}
+
+.calender__header__navbtn {
+  margin: auto;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #e4d2f9;
+  border: none;
+}

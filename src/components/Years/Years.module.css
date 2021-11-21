@@ -1,0 +1,52 @@
+.calendar__years {
+    padding: 2px 2px 2px 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.calendar__years__item {
+    font-size: 14px;
+    padding: 9px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px red solid; */
+}
+
+
+.calendar__year__span {
+    cursor: pointer;
+    padding: 5px 6px;
+    border-radius: 3px;
+}
+
+.calendar__year__span:hover {
+    color: #34B505;
+    background-color: #DAFFCC;
+}
+
+.calendar__current__year {
+    color: #34B505;
+    font-weight: bold;
+    background-color: #DAFFCC;
+}
+
+.calendar__years__shuffleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__years__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    color: #0086B3;
+    background-color: #CCF2FF;
+}

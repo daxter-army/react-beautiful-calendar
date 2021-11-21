@@ -1,0 +1,19 @@
+.calendar__weekdaybox {
+    padding: 1px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px red solid; */
+}
+
+.weekday__saturday {
+    color: #D5B810;
+    background-color: #FBF5D0;
+    border-radius: 15px;
+}
+
+.weekday__sunday {
+    color: #C41078;
+    background-color: #FCCFE9;
+    border-radius: 15px;
+}
