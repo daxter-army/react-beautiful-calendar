@@ -63,7 +63,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChangeHandler}) {
         .map((item, index) => index + 1)
     );
     setNoOfDatesNextMonthArr(nextMonthDatesHandler());
-  }, [month, year]);
+  }, [noOfDays]);
 
   // DATES
   const prevMonthDatesHandler = () => {

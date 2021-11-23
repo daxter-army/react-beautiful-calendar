@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful-calendar",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "A beautiful react calendar component library for your beautiful react apps",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -34,6 +34,7 @@
     "react": "^17.0.2"
   },
   "dependencies": {
+    "file-loader": "^6.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-icons": "^4.3.1"

@@ -1,5 +1,6 @@
 // REACT IMPORTS
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import ChevronLeft from '../../assets/chevron-left-years.png'
+import ChevronRight from '../../assets/chevron-right-years.png'
 
 // STYLES IMPORTS
 import styles from './Years.module.css'
@@ -8,7 +9,7 @@ const Years = (props) => {
     return (
         <div className={styles.calendar__years}>
             <div className={styles.calendar__years__shuffleBtn} onClick={props.shuffleLeftClicker}>
-                <button className={styles.calendar__years__button}><FaChevronLeft /></button>
+                <button className={styles.calendar__years__button}><img src={ChevronLeft} alt="chevron-logo-button" className={styles.shuffle__button_logo}/></button>
             </div>
             {
                 props.years.map((year, index) => {
@@ -16,7 +17,7 @@ const Years = (props) => {
                 })
             }
             <div className={styles.calendar__years__shuffleBtn} onClick={props.shuffleRightClicker}>
-                <button className={styles.calendar__years__button}><FaChevronRight /></button>
+                <button className={styles.calendar__years__button}><img src={ChevronRight} alt="chevron-logo-button" className={styles.shuffle__button_logo}/></button>
             </div>
         </div>
     )

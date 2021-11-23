@@ -39,6 +39,13 @@ module.exports = {
                     'css-loader'
                 ]
             },
+            {
+                //? match all files with these extensions for images 
+                test: /\.(png|jpg|jpeg|svg)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     },
     plugins:[
