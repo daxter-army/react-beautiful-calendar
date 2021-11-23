@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // STYLES IMPORT
 import styles from './Year.module.css'
 

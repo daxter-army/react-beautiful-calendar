@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // COMPONENT IMPORTS
 import DateItem from './DateItem/DateItem'
 

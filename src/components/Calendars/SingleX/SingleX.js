@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // STYLES IMPORTS
 import styles from './SingleX.module.css'
 

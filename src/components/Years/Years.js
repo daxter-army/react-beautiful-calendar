@@ -1,4 +1,5 @@
 // REACT IMPORTS
+import React from 'react'
 import ChevronLeft from '../../assets/chevron-left-years.png'
 import ChevronRight from '../../assets/chevron-right-years.png'
 

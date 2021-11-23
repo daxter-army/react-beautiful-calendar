@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // custom hook to get the number of days, and the starting day of the month
 // I am taking months from index 0
 const useDate = (month, year) => {

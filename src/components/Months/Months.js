@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // DEFAULT DATA IMPORT
 import { indexToMonth } from '../../data/data'
 

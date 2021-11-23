@@ -1,3 +1,6 @@
+// REACT IMPORTS
+import React from 'react'
+
 // COMPONENT IMPORTS
 import WeekdayItem from './WeekdayItem/WeekdayItem'
 
