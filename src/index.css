@@ -1,0 +1,19 @@
+/* for dev purpose only */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calendar__wrapper {
+  padding-top: 5px;
+  padding-bottom: 2px;
+  display: grid;
+  grid-template-rows: 0.15fr 0.1fr auto;
+  width: 310px;
+  /* max-height: 100%; */
+  border: 2px #d5d5d5 solid;
+  border-radius: 5px;
+}
