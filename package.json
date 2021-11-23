@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful-calendar",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "A beautiful react calendar component library for your beautiful react apps",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -17,6 +17,14 @@
   "bugs": {
     "url": "https://github.com/daxter-army/react-beautiful-calendar/issues"
   },
+  "keywords": [
+    "calendar",
+    "date-picker",
+    "month-picker",
+    "year-picker",
+    "functional-component",
+    "react-beautiful-calendar"
+  ],
   "homepage": "https://github.com/daxter-army/react-beautiful-calendar#readme",
   "devDependencies": {
     "@babel/core": "^7.16.0",

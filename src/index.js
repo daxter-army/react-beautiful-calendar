@@ -29,7 +29,7 @@ import {
 // STYLES IMPORTS
 import styles from "./react-beautiful-calendar.module.css";
 
-function Rbc({ variant = 'default', font = 'DM Sans', onDateChangeHandler}) {
+function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
   const styles__ = {
     fontFamily: `${font}, sans-serif`
   }
@@ -138,7 +138,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChangeHandler}) {
     setClickedMonth(month);
     setClickedYear(year);
     // console.log(`current date: ${date}-${month + 1}-${year}`);
-    onDateChangeHandler([date, month + 1, year])
+    onDateChange([date, month + 1, year])
   };
 
   // MONTHS
@@ -246,7 +246,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChangeHandler}) {
 Rbc.propTypes = {
   variant: PropTypes.oneOf(['default', 'singleX', 'singleY']),
   font: PropTypes.string,
-  onDateChangeHandler: PropTypes.func
+  onDateChange: PropTypes.func
 }
 
 export default Rbc;
