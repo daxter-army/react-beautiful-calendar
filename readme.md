@@ -21,6 +21,10 @@
 
 ### 🐱‍🏍 Getting Started
 
+- Compatibility
+
+  - This package uses react, react-dom 17.0.2 as peer dependencies & prop-types 15.7.2 as a dependency.
+
 - Installation
 
   - Install it via npm, by using
