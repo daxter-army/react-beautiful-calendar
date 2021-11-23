@@ -137,7 +137,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChangeHandler}) {
     setDate(date);
     setClickedMonth(month);
     setClickedYear(year);
-    console.log(`current date: ${date}-${month + 1}-${year}`);
+    // console.log(`current date: ${date}-${month + 1}-${year}`);
     onDateChangeHandler([date, month + 1, year])
   };
 

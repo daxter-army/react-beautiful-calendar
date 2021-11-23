@@ -1,7 +1,7 @@
 // REACT IMPORTS
 import React from 'react'
-import ChevronLeft from '../../assets/chevron-left-header.png'
-import ChevronRight from '../../assets/chevron-right-header.png'
+import ChevronLeft from 'assets/chevron-left-header.png'
+import ChevronRight from 'assets/chevron-right-header.png'
 
 // COMPONENT IMPORTS
 import Month from './Month/Month'
