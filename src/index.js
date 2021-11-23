@@ -27,7 +27,7 @@ import {
 } from "./data/data";
 
 // STYLES IMPORTS
-import styles from "./react-beautiful-calendar.module.css";
+import styles from "./index.module.css";
 
 function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
   const styles__ = {
