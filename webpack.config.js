@@ -13,7 +13,8 @@ module.exports = {
     externalsPresets: {node: true},
     externals: [nodeExternals()],
     resolve: {
-        extensions: ['*', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx'],
+        // modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
     module: {
         rules:[
