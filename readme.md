@@ -9,13 +9,17 @@
     <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/base-calendar-ss.jpg?token=AL3MMOEIBUML7LIXASVVPO3BUZVFA" width="35%" alt="base-calendar-image"/>
 </p>
 
-### ⚡ SPECIFICATIONS
+### 🏡 Online Demo
+
+- Visit <a href="https://daxter-army.github.io/react-beautiful-calendar/"><strong>Project Homepage</strong></a> to see live demo.
+
+### ⚡ Specifications
 
 - Pick days, months, years
 - Choose size as per your convenience and mood **[COMING SOON!]**
 - No third-party module needed, no moment.js
 
-### 🐱‍🏍 GETTING STARTED
+### 🐱‍🏍 Getting Started
 
 - Installation
 
@@ -45,15 +49,15 @@
   <Calendar onDateChange={your_handler_function} />
   ```
 
-### 🦮 USER GUIDE
+### 🦮 User Guide
 
 #### Calendar
 
-Displays a complete, interactive calendar widget.
+- Displays a complete, interactive calendar widget.
 
 #### Props
 
-**This documentation is compatible with the current package version, 1.1.11**
+- **This documentation is compatible with the current package version, 1.1.11**
 
 |   Prop name    |                                                       Description                                                       | Default value |                 Example                  |
 | :------------: | :---------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------: |
@@ -61,15 +65,19 @@ Displays a complete, interactive calendar widget.
 |     `font`     |                                             Sets font style for the widget                                              |   `DM Sans`   |             `font="DM Sans"`             |
 | `onDateChange` | Handler function, triggers when a date is selected, it returns you an array containing 3 values as date, month and year |       -       | `dateChangeHandler([date, month, year])` |
 
-### 📤 USEFUL LINKS
+### Issues
 
-Icons: [Fontawesome](https://fontawesome.com)
+- Issues: [Issues](https://github.com/daxter-army/react-beautiful-calendar/issues)
 
-### 📜 LICENSE
+### 📤 Useful Links
 
-MIT License
+- Icons: [Fontawesome](https://fontawesome.com)
 
-### 🏆 AUTHOR
+### 📜 License
+
+- MIT License
+
+### 🏆 Author
 
 <table>
   <tr>
