@@ -6,7 +6,7 @@
 **A beautiful react calendar component library for your beautiful react apps.**
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/calendar_svg.svg" width="35%" alt="base-calendar-image"/>
+    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/calendar_svg.svg" width="37%" alt="base-calendar-image"/>
 </p>
 
 ### 🏡 Online Demo
@@ -23,7 +23,7 @@
 
 - Compatibility
 
-  - This package uses react, react-dom 17.0.2 as peer dependencies & prop-types 15.7.2 as a dependency.
+  - This package uses `react: "^17.0.2"`, `react-dom: "^17.0.2"` as peer dependencies & `prop-types: ^15.7.2` as a dependency.
 
 - Installation
 
@@ -61,7 +61,7 @@
 
 #### Props
 
-- **This documentation is compatible with the current package version, 1.1.11**
+- **This documentation is compatible with the current package version, `1.1.13`**
 
 |   Prop name    |                                                       Description                                                       | Default value |                 Example                  |
 | :------------: | :---------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------: |

@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful-calendar",
-  "version": "1.1.11",
+  "version": "1.1.13",
   "description": "A beautiful react calendar component library for your beautiful react apps",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -25,7 +25,7 @@
     "functional-component",
     "react-beautiful-calendar"
   ],
-  "homepage": "https://github.com/daxter-army/react-beautiful-calendar#readme",
+  "homepage": "https://daxter-army.github.io/react-beautiful-calendar",
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
