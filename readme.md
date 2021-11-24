@@ -11,6 +11,7 @@
 
 ### 🏡 Online Demo
 
+- Visit <a href="https://www.npmjs.com/package/react-beautiful-calendar"><strong>Npm Package Homepage</strong>.</a>
 - Visit <a href="https://daxter-army.github.io/react-beautiful-calendar/"><strong>Project Homepage</strong></a> to see live demo.
 
 ### ⚡ Specifications
