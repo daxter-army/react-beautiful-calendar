@@ -59,6 +59,22 @@
 
 - Displays a complete, interactive calendar widget.
 
+#### Code Snippet Example
+
+```javascript
+import Calendar from "react-beautiful-calendar";
+
+const App = () => {
+  const dateChangeHandler = ([date, month, year]) => {
+    console.log(`${date}-${month}-${year}`);
+  };
+
+  // ...other code
+
+  return <Calendar onDateChange={dateChangeHandler} />;
+};
+```
+
 #### Props
 
 - **This documentation is compatible with the current package version, `1.1.13`**
