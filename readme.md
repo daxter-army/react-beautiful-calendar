@@ -69,7 +69,7 @@
 |     `font`     |                                             Sets font style for the widget                                              |   `DM Sans`   |             `font="DM Sans"`             |
 | `onDateChange` | Handler function, triggers when a date is selected, it returns you an array containing 3 values as date, month and year |       -       | `dateChangeHandler([date, month, year])` |
 
-### Issues
+### 🐞 Issues
 
 - Issues: [Issues](https://github.com/daxter-army/react-beautiful-calendar/issues)
 
