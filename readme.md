@@ -20,7 +20,7 @@
 - Choose size as per your convenience and mood **[COMING SOON!]**
 - No third-party module needed, no moment.js
 
-### 🐱‍🏍 Getting Started
+### 🚀 Getting Started
 
 - Compatibility
 
