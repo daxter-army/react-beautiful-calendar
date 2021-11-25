@@ -6,7 +6,7 @@
 **A beautiful react calendar component library for your beautiful react apps.**
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/default-calendar-ss.svg" width="37%" alt="base-calendar-image"/>
+    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/default-calendar-ss.svg" width="100px" alt="base-calendar-image"/>
 </p>
 
 ### 🏡 Online Demo
