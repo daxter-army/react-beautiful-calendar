@@ -1,5 +1,5 @@
 // REACT IMPORTS
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import PropTypes from 'prop-types'
 
 // COMPONENTS IMPORTS

@@ -78,8 +78,6 @@ const App = () => {
 
 #### Props
 
-- **This documentation is compatible with the current package version, `1.1.13`**
-
 |   Prop name    |                                                       Description                                                       | Default value |                 Example                  |
 | :------------: | :---------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------: |
 |   `variant`    |                                    It denotes the type of calendar widgets available                                    |   `default`   |           `variant="default"`            |
