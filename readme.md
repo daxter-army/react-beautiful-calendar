@@ -54,7 +54,7 @@
   <Calendar onDateChange={your_handler_function} />
   ```
 
-### 🦮 User Guide
+### 🐕‍🦺 User Guide
 
 #### Calendar
 
