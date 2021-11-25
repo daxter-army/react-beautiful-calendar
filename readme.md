@@ -67,7 +67,7 @@ import Calendar from "react-beautiful-calendar";
 
 const App = () => {
   const dateChangeHandler = ([date, month, year]) => {
-    console.log(`${date}-${month}-${year}`);
+    // ...use the values here
   };
 
   // ...other code
