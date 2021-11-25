@@ -54,44 +54,33 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
 
   const [startingDay, noOfDays, endingDay] = useDate(month, year);
 
-  useEffect(() => {
-    // Nov is starting from Mon and having 30 days
-    setNoOfDatesPrevMonthArr(prevMonthDatesHandler());
-    setNoOfDatesArr(
-      Array(noOfDays)
-        .fill(0)
-        .map((item, index) => index + 1)
-    );
-    setNoOfDatesNextMonthArr(nextMonthDatesHandler());
-  }, [noOfDays]);
-
   // DATES
-  const prevMonthDatesHandler = () => {
+  const anotherMonthDatesHandler = useCallback((month__) => {
     let offset = 0;
 
-    if (startingDay.toLowerCase() === "mon") {
-      offset = 1;
-    } else if (startingDay.toLowerCase() === "tue") {
-      offset = 2;
-    } else if (startingDay.toLowerCase() === "wed") {
-      offset = 3;
-    } else if (startingDay.toLowerCase() === "thu") {
-      offset = 4;
-    } else if (startingDay.toLowerCase() === "fri") {
-      offset = 5;
-    } else if (startingDay.toLowerCase() === "sat") {
-      offset = 6;
+    // for previous month
+    if(month__ === 'prev') {
+      if (startingDay.toLowerCase() === "mon") {
+        offset = 1;
+      } else if (startingDay.toLowerCase() === "tue") {
+        offset = 2;
+      } else if (startingDay.toLowerCase() === "wed") {
+        offset = 3;
+      } else if (startingDay.toLowerCase() === "thu") {
+        offset = 4;
+      } else if (startingDay.toLowerCase() === "fri") {
+        offset = 5;
+      } else if (startingDay.toLowerCase() === "sat") {
+        offset = 6;
+      }
+  
+      let prevMonthDays = new Date(year, month, 0).getDate() - offset;
+      return Array(offset)
+        .fill(0)
+        .map(() => ++prevMonthDays);
     }
 
-    let prevMonthDays = new Date(year, month, 0).getDate() - offset;
-    return Array(offset)
-      .fill(0)
-      .map(() => ++prevMonthDays);
-  };
-
-  const nextMonthDatesHandler = () => {
-    let offset = 0;
-
+    // for next month
     if (endingDay.toLowerCase() === "sun") {
       offset = 6;
     } else if (endingDay.toLowerCase() === "mon") {
@@ -110,12 +99,23 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
     return Array(offset)
       .fill(0)
       .map(() => counter++);
-  };
+  }, [month, year, endingDay, startingDay]);
+
+  useEffect(() => {
+    // Nov is starting from Mon and having 30 days
+    setNoOfDatesPrevMonthArr(anotherMonthDatesHandler('prev'));
+    setNoOfDatesArr(
+      Array(noOfDays)
+        .fill(0)
+        .map((item, index) => index + 1)
+    );
+    setNoOfDatesNextMonthArr(anotherMonthDatesHandler('next'));
+  }, [noOfDays, month, year, anotherMonthDatesHandler]);
 
   const leftClickHandler = () => {
     if (month === 0) {
-      setMonth(11);
       setYear(year - 1);
+      setMonth(11);
       return;
     }
 
@@ -124,11 +124,12 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
 
   const rightClickHandler = () => {
     if (month === 11) {
-      setMonth(0);
       setYear(year + 1);
+      setMonth(0);
       return;
     }
 
+    // console.log(month)
     setMonth(month + 1);
   };
 
@@ -246,7 +247,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
 Rbc.propTypes = {
   variant: PropTypes.oneOf(['default', 'singleX', 'singleY']),
   font: PropTypes.string,
-  onDateChange: PropTypes.func
+  onDateChangeHandler: PropTypes.func
 }
 
 export default Rbc;
