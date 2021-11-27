@@ -17,7 +17,7 @@
 ### ⚡ Specifications
 
 - Pick days, months, years
-- Choose size as per your convenience and mood **[COMING SOON!]**
+- Choose size as per your requirement, currently 3 models are availabe, check it <a href="https://daxter-army.github.io/react-beautiful-calendar/"><strong>here</strong>.</a>
 - No third-party module needed, no moment.js
 
 ### 🚀 Getting Started
@@ -51,7 +51,11 @@
 - Using
   - Use it by adding,
   ```js
-  <Calendar onDateChange={your_handler_function} />
+  <Calendar
+    variant="variant_you_want"
+    font="font_you_want"
+    onDateChange={your_handler_function}
+  />
   ```
 
 ### 📑 User Guide
@@ -78,11 +82,11 @@ const App = () => {
 
 #### Props
 
-|   Prop name    |                                                       Description                                                       | Default value |                 Example                  |
-| :------------: | :---------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------: |
-|   `variant`    |                                    It denotes the type of calendar widgets available                                    |   `default`   |           `variant="default"`            |
-|     `font`     |                                             Sets font style for the widget                                              |   `DM Sans`   |             `font="DM Sans"`             |
-| `onDateChange` | Handler function, triggers when a date is selected, it returns you an array containing 3 values as date, month and year |       -       | `dateChangeHandler([date, month, year])` |
+|   Prop name    |                                                       Description                                                       |                 Values                  | Default value |                 Example                  |
+| :------------: | :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------------: | :-----------: | :--------------------------------------: |
+|   `variant`    |                                    It denotes the type of calendar widgets available                                    |     `default`, `singleX`, `singleY`     |   `default`   |           `variant="default"`            |
+|     `font`     |                                             Sets font style for the widget                                              | Just pass the font name you want to use |   `DM Sans`   |             `font="DM Sans"`             |
+| `onDateChange` | Handler function, triggers when a date is selected, it returns you an array containing 3 values as date, month and year |                    -                    |       -       | `dateChangeHandler([date, month, year])` |
 
 ### 🐞 Issues
 
