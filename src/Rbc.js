@@ -22,16 +22,26 @@ import {
   weekdaysNameArr,
   monthsNameArr,
   monthToIndex,
-  yearsArrLimit,
   generateYearsArr,
 } from "./data/data";
 
 // STYLES IMPORTS
-import styles from "./index.module.css";
+import styles from "./Rbc.module.css";
 
-function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
+function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
   const styles__ = {
     fontFamily: `${font}, sans-serif`
+  }
+
+  let yearsArrLimit = 0
+
+  if(variant === 'singleX' || variant === 'singleY') {
+    // to show 8 months on the grid
+    yearsArrLimit = 7
+  }
+  else {
+    // to show 18 months on the grid
+    yearsArrLimit = 17
   }
 
   const weekdaysArr = weekdaysNameArr;
@@ -59,7 +69,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
     let offset = 0;
 
     // for previous month
-    if(month__ === 'prev') {
+    if (month__ === 'prev') {
       if (startingDay.toLowerCase() === "mon") {
         offset = 1;
       } else if (startingDay.toLowerCase() === "tue") {
@@ -73,7 +83,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
       } else if (startingDay.toLowerCase() === "sat") {
         offset = 6;
       }
-  
+
       let prevMonthDays = new Date(year, month, 0).getDate() - offset;
       return Array(offset)
         .fill(0)
@@ -134,7 +144,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
   };
 
   const dateChangeHandler = (date) => {
-    // console.log(date)
+    // console.log("dateChangeHandler")
     setDate(date);
     setClickedMonth(month);
     setClickedYear(year);
@@ -144,31 +154,32 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
 
   // MONTHS
   const monthLoadingHandler = () => {
-    // console.log("month changer");
+    // console.log("monthLoadingHandler");
     currPanel === "dates"
       ? setCurrPanel("months")
       : currPanel === "months"
-      ? setCurrPanel("dates")
-      : setCurrPanel("months");
+        ? setCurrPanel("dates")
+        : setCurrPanel("months");
   };
 
   const monthChangeHandler = (month) => {
-    // console.log(month);
+    // console.log("monthChangeHandler");
     setMonth(monthToIndex[month]);
     setCurrPanel("dates");
   };
 
   // YEARS
   const yearLoadingHandler = () => {
-    // console.log("year changer");
+    // console.log("yearLoadingHandler");
     currPanel === "dates"
       ? setCurrPanel("years")
       : currPanel === "years"
-      ? setCurrPanel("dates")
-      : setCurrPanel("years");
+        ? setCurrPanel("dates")
+        : setCurrPanel("years");
   };
 
   const yearChangeHandler = (year) => {
+    // console.log("yearChangeHandler")
     setYear(year);
     setCurrPanel("dates");
   };
@@ -191,9 +202,56 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange}) {
   let calendar = "";
 
   if (variant === "singleX") {
-    calendar = <SingleX />
+    calendar = <SingleX
+                fontName={font}
+                currScreen={currPanel}
+                year={year}
+                month={month}
+                currDate={date}
+                totalDaysArr={noOfDatesArr}
+                clickedMonth={clickedMonth}
+                clickedYear={clickedYear}
+                dateChangeClicker={dateChangeHandler}
+                // FOR MONTHS
+                months={monthsArr}
+                currMonth={month}
+                monthChangeClicker={monthChangeHandler}
+                onMonthClick={monthLoadingHandler} 
+                // YEARS
+                years={yearsArr}
+                currYear={year}
+                shuffleLeftClicker={shuffleYearLeftHandler}
+                shuffleRightClicker={shuffleYearRightHandler}
+                yearChangeClicker={yearChangeHandler}
+                onYearClick={yearLoadingHandler}
+                // NEW
+                onLeftClick={leftClickHandler}
+                onRightClick={rightClickHandler}
+              />
   } else if (variant === "singleY") {
-    calendar = <SingleY />
+    calendar = <SingleY
+                fontName={font}
+                currScreen={currPanel}
+                year={year}
+                month={month}
+                currDate={date}
+                totalDaysArr={noOfDatesArr}
+                clickedMonth={clickedMonth}
+                clickedYear={clickedYear}
+                dateChangeClicker={dateChangeHandler}
+                // FOR MONTHS
+                months={monthsArr}
+                currMonth={month}
+                monthChangeClicker={monthChangeHandler}
+                onMonthClick={monthLoadingHandler} 
+                // YEARS
+                years={yearsArr}
+                currYear={year}
+                shuffleLeftClicker={shuffleYearLeftHandler}
+                shuffleRightClicker={shuffleYearRightHandler}
+                yearChangeClicker={yearChangeHandler}
+                onYearClick={yearLoadingHandler}
+              />
   } else {
     // default calendar
     calendar = (

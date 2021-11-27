@@ -47,9 +47,6 @@ export const indexToMonthFull = {
     11: 'December',
 }
 
-// Equals to the number of grids in which we want to fill years - 1, subject to be changed
-export const yearsArrLimit = 17
-
 export const generateYearsArr = (lLim, rLim) => {
     const yearsArray = []
 

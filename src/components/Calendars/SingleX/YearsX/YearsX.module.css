@@ -1,0 +1,54 @@
+.YearsX__wrapper {
+  padding: 3px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 50px;
+  /* border: 1px red solid; */
+  box-sizing: border-box;
+}
+
+.yearsX__year__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px red solid; */
+  font-size: 14px;
+}
+
+.yearsX__current__year {
+  color: #34b505;
+  font-weight: bold;
+  background-color: #daffcc;
+  border-radius: 3px;
+}
+
+.yearsX__year__span {
+  cursor: pointer;
+  padding: 1px 4px;
+  /* border: 1px red solid; */
+  border-radius: 3px;
+  transition: 0.1s;
+}
+
+.yearsX__year__span:hover {
+  color: #34b505;
+  background-color: #daffcc;
+}
+
+.shuffleX__buttons {
+  cursor: pointer;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccf2ff;
+  border: none;
+  border-radius: 50px;
+}
+
+.shuffle__button__img {
+  width: 13px;
+}

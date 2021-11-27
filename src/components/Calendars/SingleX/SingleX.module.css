@@ -1,3 +1,20 @@
-.calendar__singleX__wrapper {
-  text-align: left;
+.singleX__wrapper {
+  width: 274px;
+  border: 1px #d5d5d5 solid;
+  border-bottom: 1px #d5d5d5 solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* .singleX__body { */
+/* IF YOU CHANGE THIS ALSO CHANGE THIS AT DATEITEM.CSS */
+/* height: 50px; */
+/* } */
+
+.body__height__dateView {
+  height: 50px;
+}
+
+.body__height__yearAndMonthView {
+  height: 54px;
 }

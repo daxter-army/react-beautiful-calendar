@@ -1,18 +1,27 @@
 // REACT IMPORTS
-import React from 'react'
+import React, { useState } from 'react'
 
 // STYLES IMPORT
 import styles from './Year.module.css'
 
-const Year = (props) => {
+const Year = ({ yearClicker, size = 16,  color = "#000000", bgColor = "transparent", hoverColor = "#e9e9e9", fontName, children }) => {
+
+    const [isHover, setIsHover] = useState(false)
+
+    const mouseHoverHandler = () => {
+        isHover ? setIsHover(false) : setIsHover(true)
+    }
 
     const styles__ = {
-        fontFamily: `${props.fontName}, sans-serif`,
+        color: color,
+        fontSize: `${size}px`,
+        fontFamily: `${fontName}, sans-serif`,
+        backgroundColor: bgColor,
     }
 
     return (
-        <button className={styles.calendar__year__btn} onClick={props.yearClicker} style={styles__} >
-            {props.children}
+        <button className={`${styles.calendar__year__btn} ${isHover ? styles.active__hover : null}`} onClick={yearClicker} style={styles__} onMouseEnter={mouseHoverHandler} onMouseLeave={mouseHoverHandler}>
+            {children}
         </button>
     )
 }

@@ -1,3 +1,77 @@
-.calendar__singleY__wrapper {
-  text-align: left;
+/* for dev purpose only */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calendar__singleX__wrapper {
+  padding: 10px 0px;
+  /*! SUBJECT TO CHANGE */
+  width: 60px;
+  border: 1px #d5d5d5 solid;
+  /* border-right: none; */
+  border-radius: 5px;
+}
+
+.calendar__toggle__btn {
+  /* margin: auto; */
+  cursor: pointer;
+  /* background-color: #e4d2f9;
+  width: 25px;
+  height: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: none;
+  border-radius: 50%; */
+}
+
+.toggle__btn__up {
+  margin-bottom: 5px;
+}
+
+.toggle__btn__down {
+  margin-top: 5px;
+}
+
+.calendar__toggle__btn__img {
+  display: block;
+  transform: rotate(90deg);
+  width: 13px;
+}
+
+.calendar__dates {
+  display: grid;
+  /*! CHANGING THIS WILL HAVE CONSEQUENCES IN OTHER COMPONENTS */
+  height: 260px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* border: 1px tomato solid; */
+  overflow: auto;
+  white-space: nowrap;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  height: 2px;
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* background-color: #e4d2f9; */
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d5d5d5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d5d5d5;
 }

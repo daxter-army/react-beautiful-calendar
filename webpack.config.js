@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/index.js'),
+    entry: path.resolve(__dirname, './src/rbc.js'),
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, './dist'),

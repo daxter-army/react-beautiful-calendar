@@ -1,0 +1,10 @@
+.dateItem__wrapper {
+  padding: 0px 6px;
+  height: 50px;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  transform: translateY(0px);
+  /* border: 2px red solid; */
+  border-radius: 5px;
+}

@@ -1,0 +1,30 @@
+.headerX__wrapper {
+  padding-top: 6px;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px red solid; */
+}
+
+.headerX__month__year {
+  /* border: 1px red solid; */
+  margin: 0px 12px;
+}
+
+.HeaderX__shuffle__btn {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4d2f9;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+}
+
+.shuffle__btn__img {
+  width: 13px;
+}

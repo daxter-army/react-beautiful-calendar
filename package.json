@@ -1,10 +1,10 @@
 {
   "name": "react-beautiful-calendar",
-  "version": "1.1.16",
+  "version": "1.2.1",
   "description": "A beautiful react calendar component library for your beautiful react apps",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "source": "src/index.js",
+  "source": "src/Rbc.js",
   "scripts": {
     "build": "webpack --mode production"
   },

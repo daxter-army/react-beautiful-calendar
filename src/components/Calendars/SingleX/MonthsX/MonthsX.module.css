@@ -1,0 +1,35 @@
+.MonthsX__wrapper {
+  padding-bottom: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* This is important */
+  height: 50px;
+  /* border: 1px red solid; */
+}
+
+.MonthsX__month__items {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monthsX__month__span {
+  cursor: pointer;
+  padding: 1px 5px;
+  border-radius: 3px;
+  transition: 0.1s;
+  /* border: 1px red solid; */
+}
+
+.monthsX__month__span:hover {
+  color: #34b505;
+  background-color: #daffcc;
+}
+
+.active__month__span {
+  color: #34b505;
+  font-weight: bold;
+  background-color: #daffcc;
+}
