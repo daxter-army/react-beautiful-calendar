@@ -6,7 +6,10 @@
 **A beautiful react calendar component library for your beautiful react apps.**
 
 <p align="center">
+    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/singleX-calendar-ss.svg" width="37%" alt="horizontal-calendar-image"/>
     <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/default-calendar-ss.svg" width="37%" alt="base-calendar-image"/>
+    <img src="https://raw.githubusercontent.com/daxter-army/react-beautiful-calendar/main/readme-media/singleY-calendar-ss.svg" width="37%" alt="vertical-calendar-image"/>
+
 </p>
 
 ### 🏡 Online Demo
