@@ -1,6 +1,6 @@
 // REACT IMPORTS
 import React, { useState, useEffect, useCallback } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 // COMPONENTS IMPORTS
 import Header from "./components/Header/Header";
@@ -28,20 +28,19 @@ import {
 // STYLES IMPORTS
 import styles from "./Rbc.module.css";
 
-function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
+function Rbc({ variant = "default", font = "DM Sans", onDateChange }) {
   const styles__ = {
-    fontFamily: `${font}, sans-serif`
-  }
+    fontFamily: `${font}, sans-serif`,
+  };
 
-  let yearsArrLimit = 0
+  let yearsArrLimit = 0;
 
-  if(variant === 'singleX' || variant === 'singleY') {
+  if (variant === "singleX" || variant === "singleY") {
     // to show 8 months on the grid
-    yearsArrLimit = 7
-  }
-  else {
+    yearsArrLimit = 7;
+  } else {
     // to show 18 months on the grid
-    yearsArrLimit = 17
+    yearsArrLimit = 17;
   }
 
   const weekdaysArr = weekdaysNameArr;
@@ -65,61 +64,64 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
   const [startingDay, noOfDays, endingDay] = useDate(month, year);
 
   // DATES
-  const anotherMonthDatesHandler = useCallback((month__) => {
-    let offset = 0;
+  const anotherMonthDatesHandler = useCallback(
+    (month__) => {
+      let offset = 0;
 
-    // for previous month
-    if (month__ === 'prev') {
-      if (startingDay.toLowerCase() === "mon") {
-        offset = 1;
-      } else if (startingDay.toLowerCase() === "tue") {
-        offset = 2;
-      } else if (startingDay.toLowerCase() === "wed") {
-        offset = 3;
-      } else if (startingDay.toLowerCase() === "thu") {
-        offset = 4;
-      } else if (startingDay.toLowerCase() === "fri") {
-        offset = 5;
-      } else if (startingDay.toLowerCase() === "sat") {
-        offset = 6;
+      // for previous month
+      if (month__ === "prev") {
+        if (startingDay.toLowerCase() === "mon") {
+          offset = 1;
+        } else if (startingDay.toLowerCase() === "tue") {
+          offset = 2;
+        } else if (startingDay.toLowerCase() === "wed") {
+          offset = 3;
+        } else if (startingDay.toLowerCase() === "thu") {
+          offset = 4;
+        } else if (startingDay.toLowerCase() === "fri") {
+          offset = 5;
+        } else if (startingDay.toLowerCase() === "sat") {
+          offset = 6;
+        }
+
+        let prevMonthDays = new Date(year, month, 0).getDate() - offset;
+        return Array(offset)
+          .fill(0)
+          .map(() => ++prevMonthDays);
       }
 
-      let prevMonthDays = new Date(year, month, 0).getDate() - offset;
+      // for next month
+      if (endingDay.toLowerCase() === "sun") {
+        offset = 6;
+      } else if (endingDay.toLowerCase() === "mon") {
+        offset = 5;
+      } else if (endingDay.toLowerCase() === "tue") {
+        offset = 4;
+      } else if (endingDay.toLowerCase() === "wed") {
+        offset = 3;
+      } else if (endingDay.toLowerCase() === "thu") {
+        offset = 2;
+      } else if (endingDay.toLowerCase() === "fri") {
+        offset = 1;
+      }
+
+      let counter = 1;
       return Array(offset)
         .fill(0)
-        .map(() => ++prevMonthDays);
-    }
-
-    // for next month
-    if (endingDay.toLowerCase() === "sun") {
-      offset = 6;
-    } else if (endingDay.toLowerCase() === "mon") {
-      offset = 5;
-    } else if (endingDay.toLowerCase() === "tue") {
-      offset = 4;
-    } else if (endingDay.toLowerCase() === "wed") {
-      offset = 3;
-    } else if (endingDay.toLowerCase() === "thu") {
-      offset = 2;
-    } else if (endingDay.toLowerCase() === "fri") {
-      offset = 1;
-    }
-
-    let counter = 1;
-    return Array(offset)
-      .fill(0)
-      .map(() => counter++);
-  }, [month, year, endingDay, startingDay]);
+        .map(() => counter++);
+    },
+    [month, year, endingDay, startingDay]
+  );
 
   useEffect(() => {
     // Nov is starting from Mon and having 30 days
-    setNoOfDatesPrevMonthArr(anotherMonthDatesHandler('prev'));
+    setNoOfDatesPrevMonthArr(anotherMonthDatesHandler("prev"));
     setNoOfDatesArr(
       Array(noOfDays)
         .fill(0)
         .map((item, index) => index + 1)
     );
-    setNoOfDatesNextMonthArr(anotherMonthDatesHandler('next'));
+    setNoOfDatesNextMonthArr(anotherMonthDatesHandler("next"));
   }, [noOfDays, month, year, anotherMonthDatesHandler]);
 
   const leftClickHandler = () => {
@@ -149,7 +151,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
     setClickedMonth(month);
     setClickedYear(year);
     // console.log(`current date: ${date}-${month + 1}-${year}`);
-    onDateChange([date, month + 1, year])
+    onDateChange([date, month + 1, year]);
   };
 
   // MONTHS
@@ -158,8 +160,8 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
     currPanel === "dates"
       ? setCurrPanel("months")
       : currPanel === "months"
-        ? setCurrPanel("dates")
-        : setCurrPanel("months");
+      ? setCurrPanel("dates")
+      : setCurrPanel("months");
   };
 
   const monthChangeHandler = (month) => {
@@ -174,8 +176,8 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
     currPanel === "dates"
       ? setCurrPanel("years")
       : currPanel === "years"
-        ? setCurrPanel("dates")
-        : setCurrPanel("years");
+      ? setCurrPanel("dates")
+      : setCurrPanel("years");
   };
 
   const yearChangeHandler = (year) => {
@@ -202,56 +204,60 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
   let calendar = "";
 
   if (variant === "singleX") {
-    calendar = <SingleX
-                fontName={font}
-                currScreen={currPanel}
-                year={year}
-                month={month}
-                currDate={date}
-                totalDaysArr={noOfDatesArr}
-                clickedMonth={clickedMonth}
-                clickedYear={clickedYear}
-                dateChangeClicker={dateChangeHandler}
-                // FOR MONTHS
-                months={monthsArr}
-                currMonth={month}
-                monthChangeClicker={monthChangeHandler}
-                onMonthClick={monthLoadingHandler} 
-                // YEARS
-                years={yearsArr}
-                currYear={year}
-                shuffleLeftClicker={shuffleYearLeftHandler}
-                shuffleRightClicker={shuffleYearRightHandler}
-                yearChangeClicker={yearChangeHandler}
-                onYearClick={yearLoadingHandler}
-                // NEW
-                onLeftClick={leftClickHandler}
-                onRightClick={rightClickHandler}
-              />
+    calendar = (
+      <SingleX
+        fontName={font}
+        currScreen={currPanel}
+        year={year}
+        month={month}
+        currDate={date}
+        totalDaysArr={noOfDatesArr}
+        clickedMonth={clickedMonth}
+        clickedYear={clickedYear}
+        dateChangeClicker={dateChangeHandler}
+        // FOR MONTHS
+        months={monthsArr}
+        currMonth={month}
+        monthChangeClicker={monthChangeHandler}
+        onMonthClick={monthLoadingHandler}
+        // YEARS
+        years={yearsArr}
+        currYear={year}
+        shuffleLeftClicker={shuffleYearLeftHandler}
+        shuffleRightClicker={shuffleYearRightHandler}
+        yearChangeClicker={yearChangeHandler}
+        onYearClick={yearLoadingHandler}
+        // NEW
+        onLeftClick={leftClickHandler}
+        onRightClick={rightClickHandler}
+      />
+    );
   } else if (variant === "singleY") {
-    calendar = <SingleY
-                fontName={font}
-                currScreen={currPanel}
-                year={year}
-                month={month}
-                currDate={date}
-                totalDaysArr={noOfDatesArr}
-                clickedMonth={clickedMonth}
-                clickedYear={clickedYear}
-                dateChangeClicker={dateChangeHandler}
-                // FOR MONTHS
-                months={monthsArr}
-                currMonth={month}
-                monthChangeClicker={monthChangeHandler}
-                onMonthClick={monthLoadingHandler} 
-                // YEARS
-                years={yearsArr}
-                currYear={year}
-                shuffleLeftClicker={shuffleYearLeftHandler}
-                shuffleRightClicker={shuffleYearRightHandler}
-                yearChangeClicker={yearChangeHandler}
-                onYearClick={yearLoadingHandler}
-              />
+    calendar = (
+      <SingleY
+        fontName={font}
+        currScreen={currPanel}
+        year={year}
+        month={month}
+        currDate={date}
+        totalDaysArr={noOfDatesArr}
+        clickedMonth={clickedMonth}
+        clickedYear={clickedYear}
+        dateChangeClicker={dateChangeHandler}
+        // FOR MONTHS
+        months={monthsArr}
+        currMonth={month}
+        monthChangeClicker={monthChangeHandler}
+        onMonthClick={monthLoadingHandler}
+        // YEARS
+        years={yearsArr}
+        currYear={year}
+        shuffleLeftClicker={shuffleYearLeftHandler}
+        shuffleRightClicker={shuffleYearRightHandler}
+        yearChangeClicker={yearChangeHandler}
+        onYearClick={yearLoadingHandler}
+      />
+    );
   } else {
     // default calendar
     calendar = (
@@ -265,9 +271,7 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
           onLeftClick={leftClickHandler}
           onRightClick={rightClickHandler}
         />
-        <Weekdays
-          totalDays={weekdaysArr}
-        />
+        <Weekdays totalDays={weekdaysArr} />
         {currPanel === "dates" ? (
           <Dates
             currDate={date}
@@ -303,9 +307,9 @@ function Rbc({ variant = 'default', font = 'DM Sans', onDateChange }) {
 }
 
 Rbc.propTypes = {
-  variant: PropTypes.oneOf(['default', 'singleX', 'singleY']),
+  variant: PropTypes.oneOf(["default", "singleX", "singleY"]),
   font: PropTypes.string,
-  onDateChangeHandler: PropTypes.func
-}
+  onDateChangeHandler: PropTypes.func,
+};
 
 export default Rbc;

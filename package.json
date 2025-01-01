@@ -4,7 +4,7 @@
   "description": "A beautiful react calendar component library for your beautiful react apps",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "source": "src/Rbc.js",
+  "source": "src/rbc.js",
   "scripts": {
     "build": "webpack --mode production"
   },
